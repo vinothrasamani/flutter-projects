@@ -95,9 +95,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         ),
                         title: Text(
                           places[index].placeName,
+                          style: const TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                        subtitle: Text(
+                          places[index].addr(),
+                          style: const TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
                         trailing: CircleAvatar(
-                          radius: 20,
+                          radius: 23,
                           backgroundImage: FileImage(
                             places[index].image,
                           ),
@@ -105,6 +114,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         onTap: () {
                           _onItemSelected(places[index]);
                         },
+                        titleAlignment: ListTileTitleAlignment.titleHeight,
                       ),
                     ),
         ),
