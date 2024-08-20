@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "47606691109",
+    "firebase_url": "https://thaughts-9aef7-default-rtdb.firebaseio.com",
+    "project_id": "thaughts-9aef7",
+    "storage_bucket": "thaughts-9aef7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47606691109:android:e9b224689a2f660082d6cc",
+        "android_client_info": {
+          "package_name": "com.example.vsd_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2sZgf0ugmaIqoMnwSvnvhnKAs4wPD9B4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
