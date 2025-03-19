@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:second_app/container_quiz.dart';
 import 'package:second_app/questions.dart';
 import 'package:second_app/data/question_list.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:intl/intl.dart';
+import 'l10n/app_localizations.dart';
 import 'package:second_app/result_screen.dart';
+// import 'package:your_app/l10n/app_localizations.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -57,6 +61,18 @@ class _QuizState extends State<Quiz> {
 
     return MaterialApp(
       title: 'Quiz Game',
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
+        AppLocalizations.delegate, // Custom delegate for translations
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en', ''), // English
+        Locale('ta', ''), // Spanish
+      ],
+      locale: const Locale('ta', ''),
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(

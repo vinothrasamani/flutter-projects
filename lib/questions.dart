@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:second_app/answer_button.dart';
 import 'package:second_app/data/question_list.dart';
+import 'package:second_app/l10n/app_localizations.dart';
 
 class Questions extends StatefulWidget {
   const Questions({super.key, required this.onChoosedAnswer});
@@ -25,6 +26,7 @@ class _QustionsState extends State<Questions> {
   @override
   Widget build(BuildContext context) {
     final currentQuestion = questions[currentQuestionIndex];
+    var translator = AppLocalizations.of(context);
 
     return SizedBox(
       width: double.infinity,
@@ -46,7 +48,7 @@ class _QustionsState extends State<Questions> {
               height: 20,
             ),
             Text(
-              currentQuestion.text,
+              translator!.translate('q${currentQuestion.num}'),
               style: const TextStyle(
                 fontSize: 20,
                 color: Colors.white,

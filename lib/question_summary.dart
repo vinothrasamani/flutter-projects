@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:second_app/l10n/app_localizations.dart';
 
 class QuestionSummary extends StatelessWidget {
   const QuestionSummary(this.summaryData, {super.key});
@@ -7,6 +8,8 @@ class QuestionSummary extends StatelessWidget {
 
   @override
   Widget build(context) {
+    var translator = AppLocalizations.of(context);
+
     return SizedBox(
       height: 550,
       child: SingleChildScrollView(
@@ -41,7 +44,8 @@ class QuestionSummary extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        item['question'] as String,
+                        translator!.translate(
+                            'q${((item['question_index'] as int) + 1).toString()}'),
                         style: const TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 20,
