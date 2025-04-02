@@ -142,6 +142,7 @@ class _AddNewExpenseOverlay extends State<AddNewExpenseOverlay> {
           color: Theme.of(context).cardTheme.color,
         ),
         child: DropdownButton(
+          isExpanded: true,
           value: _selectedCategory,
           items: Category.values
               .map(
@@ -163,7 +164,6 @@ class _AddNewExpenseOverlay extends State<AddNewExpenseOverlay> {
       );
 
       return SizedBox(
-        height: double.infinity,
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.fromLTRB(20, 20, 20, keyboardSpace + 20),
@@ -203,12 +203,11 @@ class _AddNewExpenseOverlay extends State<AddNewExpenseOverlay> {
                     datePlace,
                   ],
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
+                isConditionMet ? option : const SizedBox(),
+                const SizedBox(height: 15),
                 Row(
                   children: [
-                    isConditionMet ? option : const SizedBox(),
                     const Spacer(),
                     OutlinedButton(
                       onPressed: () {
@@ -225,9 +224,7 @@ class _AddNewExpenseOverlay extends State<AddNewExpenseOverlay> {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 3,
-                    ),
+                    const SizedBox(width: 8),
                     ElevatedButton(
                       onPressed: _submitExpenseData,
                       child: const Text(

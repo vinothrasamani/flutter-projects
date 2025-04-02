@@ -4,18 +4,10 @@ import 'package:flutter/material.dart';
 
 void main() {
   Color dark = const Color.fromARGB(255, 2, 94, 96);
-  Color light = const Color.fromARGB(255, 14, 96, 2);
-
-  // WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setPreferredOrientations([
-  //   DeviceOrientation.portraitUp,
-  // ]).then((func) {
-  //   runApp(app);
-  // });
-
+  Color light = const Color.fromARGB(255, 16, 74, 0);
   runApp(
     MaterialApp(
-      // themeMode: ThemeMode.system,
+      themeMode: ThemeMode.system,
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: ColorScheme.fromSeed(
           brightness: Brightness.dark,
@@ -55,6 +47,7 @@ void main() {
           backgroundColor: Color.fromARGB(255, 0, 0, 0),
         ),
       ),
+      debugShowCheckedModeBanner: false,
       theme: ThemeData().copyWith(
         colorScheme: ColorScheme.fromSeed(
           seedColor: light,
@@ -86,7 +79,7 @@ void main() {
           ),
         ),
         cardTheme: const CardTheme(
-          color: Color.fromARGB(52, 61, 236, 34),
+          color: Color.fromARGB(255, 184, 255, 173),
           margin: EdgeInsets.symmetric(vertical: 3, horizontal: 8),
         ),
       ),
